@@ -14,34 +14,17 @@ namespace RickAndMorty
     /// </summary>
     public partial class Main : UserControl
     {
-        List<Location> locations;
+        List<Character> characters;
         public Main()
         {
             InitializeComponent();
-            locations = new List<Location>();
-            GetLocationFromJson();
+            characters = new List<Character>();
+            JsonWork.GetCharactersFromJson(ref characters);
+            Style style = new Style(this);
+            CloseButton.Click += style.Close_Click;
+            MinimizeButton.Click += style.Minimize_Click;
+            MaximizeButton.Click += style.Maximize_Click;
         }
-        public void GetLocationFromJson()
-        {
-            var webRequest = WebRequest.Create("https://rickandmortyapi.com/api/location") as HttpWebRequest;
-            if (webRequest == null) return;
-            webRequest.ContentType = "application/json";
-            webRequest.UserAgent = "Nothing";
-            using (var s = webRequest.GetResponse().GetResponseStream())
-            {
-                using (var sr = new StreamReader(s))
-                {
-                    var locationsAsJson = sr.ReadToEnd();
-                    JObject json = JObject.Parse(locationsAsJson);
-                    List<JToken> jTokens = json["results"].Children().ToList();
-                    foreach (JToken item in jTokens)
-                    {
-                        Location newLocation = item.ToObject<Location>();
-                        locations.Add(newLocation);
-                        MessageBox.Show(item.ToString());
-                    }
-                }
-            }
-        }
+       
     }
 }

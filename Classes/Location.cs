@@ -1,20 +1,21 @@
 ﻿
+using System;
 using System.Collections.Generic;
 
 namespace RickAndMorty
 {
     public class Location
     {
-        int Id { get; set; }
-        string ? Name { get; set; }
-        string ? Type { get; set; }
-        string ? Dimension { get; set; }
-        List <string> ? Residents { get; set; }
-        string ? Url { get; set; }
-        string ? Created { get; set; }
+        public int ID { get; set; }
+        public string? Name { get; set; }
+        public string ? Type { get; set; }
+        public string ? Dimension { get; set; }
+        public List <string> ? Residents { get; set; }
+        public string ? Url { get; set; }
+        public DateTime ? Created { get; set; }
         public override string ToString()
         {
-            return $"{Id} - {Name}- {Url}\n";
+            return $" ID: {ID}\n Name: {Name}\n Type: {Type}\n Dimension: {Dimension}\n  Url: {Url}\n {Created}\n";
         }
     }
 }

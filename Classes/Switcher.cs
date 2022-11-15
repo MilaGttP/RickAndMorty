@@ -7,7 +7,6 @@ namespace RickAndMorty
     {
         void UtilizeState(object state);
     }
-
     public static class Switcher
     {
         public static MainWindow pageSwitcher;
