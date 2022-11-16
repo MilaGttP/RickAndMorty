@@ -75,14 +75,14 @@
                                     <Setter Property="Background" Value="Transparent"/>
                                 </Style>
                             </StackPanel.Resources>
-                            <TextBlock x:Name="FirstName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
-                            <TextBlock x:Name="FirstStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
+                            <TextBlock x:Name="JerryName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
+                            <TextBlock x:Name="JerryStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
 
-                            <TextBlock Foreground="#959698" Text="Last known location: " FontWeight="SemiBold" FontSize="16"/>
-                            <TextBlock x:Name="FirstLastLoc" Foreground="Azure" FontSize="12"/>
+                            <TextBlock Foreground="#959698" Text="Last known location:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="JerryLastLoc" Foreground="Azure" FontSize="15"/>
 
-                            <TextBlock Foreground="#959698" Text="First seen in: " FontWeight="SemiBold" FontSize="16"/>
-                            <TextBlock x:Name="FirstFSeen" Foreground="Azure" FontSize="12"/>
+                            <TextBlock Foreground="#959698" Text="First seen in:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="JerryFSeen" Foreground="Azure" FontSize="15"/>
                         </StackPanel>
                         
                     </WrapPanel>

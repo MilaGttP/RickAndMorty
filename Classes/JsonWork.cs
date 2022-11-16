@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Windows;
+using System.Windows.Media.TextFormatting;
 
 namespace RickAndMorty
 {
@@ -61,9 +62,16 @@ namespace RickAndMorty
             }
         }
 
-        public static void GetLocationsForCharacter(ref List<Character> characters)
+        public static string GetLocationForCharacter(ref List<Character> characters, int id)
         {
-
+            string result;
+            List<Location> allLocs = new List<Location>();
+            GetLocationsFromJson(ref allLocs);
+            Character current = GetCharacter(ref characters, id);
+            string[] currentLoc = current.Location.ToString().Split(",");
+            string[] auxRes = currentLoc[0].Split(":");
+            result = auxRes[1].Replace('"', ' ').Trim();
+            return result;
         }
 
         public static void GetEpisodesFromJson(ref List<Episode> episodes)
@@ -87,10 +95,19 @@ namespace RickAndMorty
                 }
             }
         }
-
-        public static void GetEpisodesForCharacter(ref List<Character> characters)
+        public static List<string> GetEpisodesForCharacter(ref List<Character> characters)
         {
+            List<string> episodeNames = new List<string>();
 
+
+            return episodeNames;
+        }
+
+        public static string GetFirstEpisodeForCharacter(ref List<Character> characters)
+        {
+            List<string> allNames = new List<string>();
+            allNames = GetEpisodesForCharacter(ref characters);
+            return allNames[0].ToString();
         }
     }
 }

@@ -19,7 +19,7 @@ namespace RickAndMorty
         {
             InitializeComponent();
             characters = new List<Character>();
-            JsonWork.GetCharactersFromJson(ref characters);           
+            JsonWork.GetCharactersFromJson(ref characters);
 
             Style style = new Style(this);
             CloseButton.Click += style.Close_Click;
@@ -31,10 +31,12 @@ namespace RickAndMorty
         {
             Character JerrySmith = new Character();
             JerrySmith = JsonWork.GetCharacter(ref characters, 5);
-            FirstName.Text = JerrySmith.Name;
-            FirstStatus.Text = $"{JerrySmith.Status} - {JerrySmith.Species}\n";
-            FirstLastLoc.Text = $"{JerrySmith.Location.ToString()}\n";
-            FirstFSeen.Text = JerrySmith.Episode[0].ToString();
+            JerryName.Text = JerrySmith.Name;
+            JerryStatus.Text = $"{JerrySmith.Status} - {JerrySmith.Species}\n";
+            JerryLastLoc.Text = $"{JsonWork.GetLocationForCharacter(ref characters, 5)}\n";
+            JerryFSeen.Text = JerrySmith.Episode[0].ToString();
+
+
         }
     }
 }
