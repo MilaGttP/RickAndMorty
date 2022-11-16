@@ -7,6 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="1900">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button Width="50" Height="50" Background="#3d3e43" Opacity="0.6" Content="←" FontSize="18" Foreground="Azure" HorizontalAlignment="Left" Margin="20"/>
+        <StackPanel Grid.Row="1" Width="1800" Height="780">
+            <Image />
+            <DataGrid />
+        </StackPanel>
+
     </Grid>
 </UserControl>

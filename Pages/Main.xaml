@@ -8,31 +8,42 @@
              d:DesignHeight="1000" d:DesignWidth="1900">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="280"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="The Rick and Morty API" Margin="50 15 0 0" HorizontalAlignment="Left" Foreground="Azure" Width="1650" FontSize="50" />
+        <StackPanel Background="#ffffff">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Grid.Column="2" Margin="0 15 0 0" Height="80" WindowChrome.IsHitTestVisibleInChrome="True" 
+                <TextBlock Grid.Row="1" Text="The Rick and Morty API" HorizontalAlignment="Center" Foreground="#3d3e43" Width="800" FontSize="70" FontWeight="Bold"/>
+                <TextBlock Grid.Row="2" Text="Made by Ivanova Liudmila, 2022" HorizontalAlignment="Center" Foreground="#3d3e43" Width="440" FontSize="30" FontWeight="SemiBold"/>
+                <StackPanel Height="80" WindowChrome.IsHitTestVisibleInChrome="True" 
                     VerticalAlignment="Top" HorizontalAlignment="Right" Orientation="Horizontal">
-            <Button x:Name="MinimizeButton" Margin="0 0 10 0" FontSize="18" Opacity="0.6" Foreground="Azure"  
-                    Width="50" Height="50" Content="🗕"  Background="#3d3e43" BorderThickness="0" Style="{StaticResource MaterialDesignFlatButton}">
-            </Button>
-            <Button x:Name="MaximizeButton" Margin="0 0 10 0" FontSize="16" Opacity="0.6" Foreground="Azure"  
-                    Width="50" Height="50" Content="🗖" Background="#3d3e43" BorderThickness="0" Style="{StaticResource MaterialDesignFlatButton}">
-            </Button>
-            <Button x:Name="CloseButton" Margin="0 0 15 0" FontSize="20" Opacity="0.6" Foreground="Azure" 
-                    Width="50" Height="50" Content="×" Background="#3d3e43" BorderThickness="0" Style="{StaticResource MaterialDesignFlatButton}">
-            </Button>
-        </StackPanel>
+                    <Button x:Name="MinimizeButton" Margin="0 0 10 0" FontSize="18" Opacity="0.6" Foreground="Azure"  
+                    Width="50" Height="50" Content="🗕"  Background="#3d3e43" BorderThickness="0">
+                    </Button>
+                    <Button x:Name="MaximizeButton" Margin="0 0 10 0" FontSize="16" Opacity="0.6" Foreground="Azure"  
+                    Width="50" Height="50" Content="🗖" Background="#3d3e43" BorderThickness="0">
+                    </Button>
+                    <Button x:Name="CloseButton" Margin="0 0 15 0" FontSize="20" Opacity="0.6" Foreground="Azure" 
+                    Width="50" Height="50" Content="×" Background="#3d3e43" BorderThickness="0">
+                    </Button>
+                </StackPanel>
 
+            </Grid>
+        </StackPanel>
+        
         <WrapPanel Grid.Row="1">
             <WrapPanel.Resources>
                 <Style TargetType="{x:Type Button}">
-                    <Setter Property="Margin" Value="30 35 0 0"/>
+                    <Setter Property="Margin" Value="32 38 0 0"/>
                     <Setter Property="Width" Value="590"/>
-                    <Setter Property="Height" Value="400"/>
+                    <Setter Property="Height" Value="300"/>
                     <Setter Property="Background" Value="#3d3e43"/>
                     <Setter Property="BorderThickness" Value="0"/>
                 </Style>
