@@ -23,7 +23,7 @@ namespace RickAndMorty
 
         public override string ToString()
         {
-            return $" ID: {ID}\n Name: {Name}\n Type: {Type}\n  Url: {Url}\n Episode: {Episode}\n";
+            return $" ID: {ID}\n Name: {Name}\n Type: {Type}\n  Url: {Url}\n Episodes: {Episode}\n";
         }
     }
 }

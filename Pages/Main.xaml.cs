@@ -14,17 +14,16 @@ namespace RickAndMorty
     /// </summary>
     public partial class Main : UserControl
     {
-        List<Character> characters;
+        List <Character> characters;
         public Main()
         {
             InitializeComponent();
             characters = new List<Character>();
             JsonWork.GetCharactersFromJson(ref characters);
-            //Style style = new Style(this);
-            //CloseButton.Click += style.Close_Click;
-            //MinimizeButton.Click += style.Minimize_Click;
-            //MaximizeButton.Click += style.Maximize_Click;
+            Style style = new Style(this);
+            CloseButton.Click += style.Close_Click;
+            MinimizeButton.Click += style.Minimize_Click;
+            MaximizeButton.Click += style.Maximize_Click;
         }
-       
     }
 }
