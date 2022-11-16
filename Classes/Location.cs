@@ -15,7 +15,7 @@ namespace RickAndMorty
         public DateTime ? Created { get; set; }
         public override string ToString()
         {
-            return $" ID: {ID}\n Name: {Name}\n Type: {Type}\n Dimension: {Dimension}\n  Url: {Url}\n {Created}\n";
+            return $" Name: {Name}";
         }
     }
 }

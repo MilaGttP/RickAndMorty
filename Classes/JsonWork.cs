@@ -32,6 +32,13 @@ namespace RickAndMorty
             }
         }
 
+        public static Character GetCharacter(ref List<Character> characters, int id)
+        {
+            Character result = new Character();
+            for (int i = 0; i < characters.Count; i++) if (i == id - 1) result = characters[i];
+            return result;
+        }
+
         public static void GetLocationsFromJson(ref List<Location> locations)
         {
             var webRequest = WebRequest.Create("https://rickandmortyapi.com/api/location") as HttpWebRequest;
@@ -54,6 +61,11 @@ namespace RickAndMorty
             }
         }
 
+        public static void GetLocationsForCharacter(ref List<Character> characters)
+        {
+
+        }
+
         public static void GetEpisodesFromJson(ref List<Episode> episodes)
         {
             var webRequest = WebRequest.Create("https://rickandmortyapi.com/api/episode") as HttpWebRequest;
@@ -74,6 +86,11 @@ namespace RickAndMorty
                     }
                 }
             }
+        }
+
+        public static void GetEpisodesForCharacter(ref List<Character> characters)
+        {
+
         }
     }
 }
