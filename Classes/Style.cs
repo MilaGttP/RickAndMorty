@@ -7,10 +7,7 @@ namespace RickAndMorty
     public class Style
     {
         private UserControl control;
-        public Style(UserControl control)
-        {
-            this.control = control;
-        }
+        public Style(UserControl control) => this.control = control;
         public void Back_Click(object sender, RoutedEventArgs e) => Switcher.Switch(new Main());
         public void Close_Click(object sender, RoutedEventArgs e)
         {

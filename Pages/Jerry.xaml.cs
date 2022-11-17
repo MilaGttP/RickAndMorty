@@ -4,9 +4,6 @@ using System.Windows.Controls;
 
 namespace RickAndMorty
 {
-    /// <summary>
-    /// Логика взаимодействия для Jerry.xaml
-    /// </summary>
     public partial class Jerry : UserControl
     {
         List<Character> characters;

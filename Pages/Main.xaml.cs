@@ -2,16 +2,9 @@
 using System.Windows.Controls;
 using System.Collections.Generic;
 using System.Windows;
-using Newtonsoft.Json.Linq;
-using System.IO;
-using System.Net;
-using System.Linq;
 
 namespace RickAndMorty
 {
-    /// <summary>
-    /// Логика взаимодействия для Main.xaml
-    /// </summary>
     public partial class Main : UserControl
     {
         List<Character> characters;

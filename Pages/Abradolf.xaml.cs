@@ -4,9 +4,6 @@ using System.Windows.Controls;
 
 namespace RickAndMorty
 {
-    /// <summary>
-    /// Логика взаимодействия для Abradolf.xaml
-    /// </summary>
     public partial class Abradolf : UserControl
     {
         List<Character> characters;

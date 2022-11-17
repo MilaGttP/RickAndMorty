@@ -3,10 +3,7 @@ using System.Windows.Controls;
 
 namespace RickAndMorty
 {
-    public interface ISwitchable
-    {
-        void UtilizeState(object state);
-    }
+    public interface ISwitchable { void UtilizeState(object state); }
     public static class Switcher
     {
         public static MainWindow pageSwitcher;

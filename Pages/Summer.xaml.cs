@@ -4,9 +4,6 @@ using System.Windows.Controls;
 
 namespace RickAndMorty
 {
-    /// <summary>
-    /// Логика взаимодействия для Summer.xaml
-    /// </summary>
     public partial class Summer : UserControl
     {
         List<Character> characters;
