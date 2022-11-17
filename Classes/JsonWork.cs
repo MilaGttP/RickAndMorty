@@ -95,19 +95,23 @@ namespace RickAndMorty
                 }
             }
         }
-        public static List<string> GetEpisodesForCharacter(ref List<Character> characters)
+        public static List<string> GetEpisodesForCharacter(ref List<Character> characters, int id)
         {
             List<string> episodeNames = new List<string>();
-
-
+            List<string> tempEpsID = new List<string>();
+            List<int> epsID = new List<int>();
+            Character current = new Character();
+            current = GetCharacter(ref characters, id);
+            foreach (var item in current.Episode) tempEpsID.Add(item.Split('/').Last());
+            epsID = tempEpsID.Select(s => int.Parse(s)).ToList();
             return episodeNames;
         }
 
-        public static string GetFirstEpisodeForCharacter(ref List<Character> characters)
+        public static string GetFirstEpisodeForCharacter(ref List<Character> characters, int id)
         {
             List<string> allNames = new List<string>();
-            allNames = GetEpisodesForCharacter(ref characters);
-            return allNames[0].ToString();
+            allNames = GetEpisodesForCharacter(ref characters, id);
+            return allNames.First().ToString();
         }
     }
 }

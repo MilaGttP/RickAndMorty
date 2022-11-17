@@ -20,6 +20,7 @@ namespace RickAndMorty
             InitializeComponent();
             characters = new List<Character>();
             JsonWork.GetCharactersFromJson(ref characters);
+            JsonWork.GetEpisodesForCharacter(ref characters, 1);
 
             Style style = new Style(this);
             CloseButton.Click += style.Close_Click;
