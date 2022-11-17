@@ -58,10 +58,10 @@ namespace RickAndMorty
             BethLastLoc.Text = $"{JsonWork.GetLocationForCharacter(ref characters, 4)}\n";
             BethFSeen.Text = JsonWork.GetFirstEpisodeForCharacter(ref characters, 4);
 
-            Character JerrySmith = new Character();
-            JerrySmith = JsonWork.GetCharacter(ref characters, 5);
-            JerryName.Text = JerrySmith.Name;
-            JerryStatus.Text = $"{JerrySmith.Status} - {JerrySmith.Species}\n";
+            Character Jerry = new Character();
+            Jerry = JsonWork.GetCharacter(ref characters, 5);
+            JerryName.Text = Jerry.Name;
+            JerryStatus.Text = $"{Jerry.Status} - {Jerry.Species}\n";
             JerryLastLoc.Text = $"{JsonWork.GetLocationForCharacter(ref characters, 5)}\n";
             JerryFSeen.Text = JsonWork.GetFirstEpisodeForCharacter(ref characters, 5);
 
