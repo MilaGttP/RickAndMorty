@@ -73,9 +73,6 @@ namespace RickAndMorty
             AbradolfFSeen.Text = JsonWork.GetFirstEpisodeForCharacter(ref characters, 7);
         }
 
-        private void Rick_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new MoreCharacterInfo());
-        }
+        private void Rick_Click(object sender, RoutedEventArgs e) => Switcher.Switch(new MoreCharacterInfo());
     }
 }

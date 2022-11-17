@@ -13,11 +13,11 @@
         </Grid.RowDefinitions>
 
         <Button x:Name="Back" Width="50" Height="50" Background="#3d3e43" Opacity="0.6" Content="←" FontSize="18" 
-                Foreground="Azure" HorizontalAlignment="Left" Margin="20" BorderThickness="0" Click="Back_Click"/>
+                Foreground="Azure" HorizontalAlignment="Left" Margin="20" BorderThickness="0"/>
         <StackPanel Grid.Row="1" Width="1800" Height="800">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type TextBlock}">
-                    <Setter Property="Margin" Value="40 5 0 0"/>
+                    <Setter Property="Margin" Value="150 5 0 0"/>
                     <Setter Property="Height" Value="55"/>
                     <Setter Property="Background" Value="Transparent"/>
                 </Style>
@@ -33,7 +33,7 @@
             <TextBlock Text="Episode(s): " Foreground="#959698" FontSize="20" FontWeight="SemiBold"/>
             <TextBlock x:Name="Episode" Foreground="Azure" FontWeight="SemiBold" FontSize="30"/>
             <TextBlock Text="Url: " Foreground="#959698" FontSize="20" FontWeight="SemiBold"/>
-            <TextBlock/>
+            <TextBlock x:Name="Url" Foreground="Azure" FontWeight="SemiBold" FontSize="30"/>
         </StackPanel>
 
     </Grid>

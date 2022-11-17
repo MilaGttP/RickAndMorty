@@ -11,6 +11,7 @@ namespace RickAndMorty
         {
             this.control = control;
         }
+        public void Back_Click(object sender, RoutedEventArgs e) => Switcher.Switch(new Main());
         public void Close_Click(object sender, RoutedEventArgs e)
         {
             Window window = Window.GetWindow(control);

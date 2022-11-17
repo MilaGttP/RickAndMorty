@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,15 +26,23 @@ namespace RickAndMorty
         {
             InitializeComponent();
             characters = new List<Character>();
-            JsonWork.GetCharactersFromJson(ref characters); 
+            JsonWork.GetCharactersFromJson(ref characters);
+            Style style = new Style(this);
+            Back.Click += style.Back_Click;
         }
-
-        private void Back_Click(object sender, RoutedEventArgs e) => Switcher.Switch(new Main());
 
         private void RickPage_Loaded(object sender, RoutedEventArgs e)
         {
             Character Rick = JsonWork.GetCharacter(ref characters, 1);
             Name.Text = Rick.Name;
+            if (Rick.Type == "") Type.Text = "unknown";
+            else Type.Text = Rick.Type;
+            Gender.Text = Rick.Gender;
+            Location.Text = JsonWork.GetLocationForCharacter(ref characters, 1);
+            List<string> episodes = new List<string>();
+            episodes = JsonWork.GetEpisodesForCharacter(ref characters, 1);
+            Episode.Text = $"{episodes[0]}, {episodes[1]}, {episodes[2]}, {episodes[3]}, {episodes[4]}";
+            Url.Text = Rick.Url;
         }
     }
 }
