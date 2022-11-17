@@ -21,14 +21,14 @@ namespace RickAndMorty
 
         private void RickPage_Loaded(object sender, RoutedEventArgs e)
         {
-            Character Rick = JsonWork.GetCharacter(ref characters, 1);
+            Character Rick = JsonWork.GetCharacter(1);
             Name.Text = Rick.Name;
             if (Rick.Type == "") Type.Text = "unknown";
             else Type.Text = Rick.Type;
             Gender.Text = Rick.Gender;
-            Location.Text = JsonWork.GetLocationForCharacter(ref characters, 1);
+            Location.Text = JsonWork.GetLocationForCharacter(1);
             List<string> episodes = new List<string>();
-            episodes = JsonWork.GetEpisodesForCharacter(ref characters, 1);
+            episodes = JsonWork.GetEpisodesForCharacter(1);
             Episode.Text = $"{episodes[0]}, {episodes[1]}, {episodes[2]}, {episodes[3]}, {episodes[4]}";
             Url.Text = Rick.Url;
         }

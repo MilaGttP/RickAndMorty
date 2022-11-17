@@ -1,12 +1,9 @@
 ﻿
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Windows;
-using System.Windows.Media.TextFormatting;
 
 namespace RickAndMorty
 {
@@ -34,8 +31,10 @@ namespace RickAndMorty
             }
         }
 
-        public static Character GetCharacter(ref List<Character> characters, int id)
+        public static Character GetCharacter(int id)
         {
+            List<Character> characters = new List<Character>();
+            GetCharactersFromJson(ref characters);
             Character result = new Character();
             for (int i = 0; i < characters.Count; i++) if (i == id - 1) result = characters[i];
             return result;
@@ -63,12 +62,14 @@ namespace RickAndMorty
             }
         }
 
-        public static string GetLocationForCharacter(ref List<Character> characters, int id)
+        public static string GetLocationForCharacter(int id)
         {
+            List<Character> characters = new List<Character>();
+            GetCharactersFromJson(ref characters);
             string result;
             List<Location> allLocs = new List<Location>();
             GetLocationsFromJson(ref allLocs);
-            Character current = GetCharacter(ref characters, id);
+            Character current = GetCharacter(id);
             string[] currentLoc = current.Location.ToString().Split(",");
             string[] auxRes = currentLoc[0].Split(":");
             result = auxRes[1].Replace('"', ' ').Trim();
@@ -96,15 +97,17 @@ namespace RickAndMorty
                 }
             }
         }
-        public static List<string> GetEpisodesForCharacter(ref List<Character> characters, int id)
+        public static List<string> GetEpisodesForCharacter(int id)
         {
+            List<Character> characters = new List<Character>();
+            GetCharactersFromJson(ref characters);
             List<string> episodeNames = new List<string>();
             List<Episode> episodes = new List<Episode>();
             GetEpisodesFromJson(ref episodes);
             List<string> tempEpsID = new List<string>();
             List<int> epsID = new List<int>();
             Character current = new Character();
-            current = GetCharacter(ref characters, id);
+            current = GetCharacter(id);
             foreach (var item in current.Episode) tempEpsID.Add(item.Split('/').Last());
             epsID = tempEpsID.Select(item => int.Parse(item)).ToList();
             foreach (var item in episodes)
@@ -114,10 +117,10 @@ namespace RickAndMorty
             return episodeNames;
         }
 
-        public static string GetFirstEpisodeForCharacter(ref List<Character> characters, int id)
+        public static string GetFirstEpisodeForCharacter(int id)
         {
             List<string> allNames = new List<string>();
-            allNames = GetEpisodesForCharacter(ref characters, id);
+            allNames = GetEpisodesForCharacter(id);
             return allNames.First().ToString();
         }
     }
