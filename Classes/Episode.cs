@@ -9,7 +9,7 @@ namespace RickAndMorty
 {
     public class Episode
     {
-       public int Id { get; set; }
+       public int ID { get; set; }
        public string ? Name { get; set; }
        public string ? AirDate { get; set; }
        public string ? EpisodeCode { get; set; }
