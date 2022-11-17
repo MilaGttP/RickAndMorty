@@ -15,6 +15,7 @@ namespace RickAndMorty
     public partial class Main : UserControl
     {
         List<Character> characters;
+
         public Main()
         {
             InitializeComponent();
@@ -70,6 +71,11 @@ namespace RickAndMorty
             AbradolfStatus.Text = $"{Abradolf.Status} - {Abradolf.Species}\n";
             AbradolfLastLoc.Text = $"{JsonWork.GetLocationForCharacter(ref characters, 7)}\n";
             AbradolfFSeen.Text = JsonWork.GetFirstEpisodeForCharacter(ref characters, 7);
+        }
+
+        private void Rick_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new MoreCharacterInfo());
         }
     }
 }

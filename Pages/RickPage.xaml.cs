@@ -20,9 +20,19 @@ namespace RickAndMorty
     /// </summary>
     public partial class MoreCharacterInfo : UserControl
     {
+        List<Character> characters;
         public MoreCharacterInfo()
         {
             InitializeComponent();
+            characters = new List<Character>();
+            JsonWork.GetCharactersFromJson(ref characters); 
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e) => Switcher.Switch(new Main());
+
+        private void RickPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            Character Rick = JsonWork.GetCharacter(ref characters, 1);
         }
     }
 }

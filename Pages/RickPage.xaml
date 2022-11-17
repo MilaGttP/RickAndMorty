@@ -5,18 +5,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RickAndMorty"
              mc:Ignorable="d" 
-             d:DesignHeight="1000" d:DesignWidth="1900">
+             d:DesignHeight="1000" d:DesignWidth="1900" Loaded="RickPage_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button Width="50" Height="50" Background="#3d3e43" Opacity="0.6" Content="←" FontSize="18" 
-                Foreground="Azure" HorizontalAlignment="Left" Margin="20"  BorderThickness="0"/>
-        <StackPanel Grid.Row="1" Width="1800" Height="780">
-            <Image />
-            <DataGrid />
+        <Button x:Name="Back" Width="50" Height="50" Background="#3d3e43" Opacity="0.6" Content="←" FontSize="18" 
+                Foreground="Azure" HorizontalAlignment="Left" Margin="20" BorderThickness="0" Click="Back_Click"/>
+        <StackPanel Grid.Row="1" Width="1800" Height="800">
+            
         </StackPanel>
 
     </Grid>

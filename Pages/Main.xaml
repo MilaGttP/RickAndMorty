@@ -54,7 +54,7 @@
                 </Style>
             </WrapPanel.Resources>
 
-            <Button>
+            <Button Click="Rick_Click">
                 <Button.Content>
                     <WrapPanel>
                         <Grid>
