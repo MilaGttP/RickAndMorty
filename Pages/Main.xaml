@@ -65,41 +65,6 @@
                         <Image Width="250" Height="250">
                             <Image.Source>
                                 <BitmapImage DecodePixelWidth="250" DecodePixelHeight="250" 
-                                             UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/5.jpeg}"/>
-                            </Image.Source>
-                        </Image>
-                        <StackPanel>
-                            <StackPanel.Resources>
-                                <Style TargetType="{x:Type TextBlock}">
-                                    <Setter Property="Margin" Value="15 5 0 0"/>
-                                    <Setter Property="Background" Value="Transparent"/>
-                                </Style>
-                            </StackPanel.Resources>
-                            <TextBlock x:Name="JerryName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
-                            <TextBlock x:Name="JerryStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
-
-                            <TextBlock Foreground="#959698" Text="Last known location:" FontWeight="SemiBold" FontSize="16"/>
-                            <TextBlock x:Name="JerryLastLoc" Foreground="Azure" FontSize="15"/>
-
-                            <TextBlock Foreground="#959698" Text="First seen in:" FontWeight="SemiBold" FontSize="16"/>
-                            <TextBlock x:Name="JerryFSeen" Foreground="Azure" FontSize="15"/>
-                        </StackPanel>
-                        
-                    </WrapPanel>
-                </Button.Content>
-            </Button>
-
-            <Button>
-                <Button.Content>
-                    <WrapPanel>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="590"/>
-                            </Grid.ColumnDefinitions>
-                        </Grid>
-                        <Image Width="250" Height="250">
-                            <Image.Source>
-                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="250" 
                                              UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/1.jpeg}"/>
                             </Image.Source>
                         </Image>
@@ -119,6 +84,7 @@
                             <TextBlock Foreground="#959698" Text="First seen in:" FontWeight="SemiBold" FontSize="16"/>
                             <TextBlock x:Name="RickFSeen" Foreground="Azure" FontSize="15"/>
                         </StackPanel>
+                        
                     </WrapPanel>
                 </Button.Content>
             </Button>
@@ -168,7 +134,7 @@
                         <Image Width="250" Height="250">
                             <Image.Source>
                                 <BitmapImage DecodePixelWidth="250" DecodePixelHeight="250" 
-                                             UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/8.jpeg}"/>
+                                             UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/3.jpeg}"/>
                             </Image.Source>
                         </Image>
                         <StackPanel>
@@ -178,14 +144,14 @@
                                     <Setter Property="Background" Value="Transparent"/>
                                 </Style>
                             </StackPanel.Resources>
-                            <TextBlock x:Name="AdjudicatorName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
-                            <TextBlock x:Name="AdjudicatorStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
+                            <TextBlock x:Name="SummerName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
+                            <TextBlock x:Name="SummerStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
 
                             <TextBlock Foreground="#959698" Text="Last known location:" FontWeight="SemiBold" FontSize="16"/>
-                            <TextBlock x:Name="AdjudicatorLastLoc" Foreground="Azure" FontSize="15"/>
+                            <TextBlock x:Name="SummerLastLoc" Foreground="Azure" FontSize="15"/>
 
                             <TextBlock Foreground="#959698" Text="First seen in:" FontWeight="SemiBold" FontSize="16"/>
-                            <TextBlock x:Name="AdjudicatorFSeen" Foreground="Azure" FontSize="15"/>
+                            <TextBlock x:Name="SummerFSeen" Foreground="Azure" FontSize="15"/>
                         </StackPanel>
                     </WrapPanel>
                 </Button.Content>
@@ -202,7 +168,7 @@
                         <Image Width="250" Height="250">
                             <Image.Source>
                                 <BitmapImage DecodePixelWidth="250" DecodePixelHeight="250" 
-                                             UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/9.jpeg}"/>
+                                             UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/4.jpeg}"/>
                             </Image.Source>
                         </Image>
                         <StackPanel>
@@ -212,14 +178,14 @@
                                     <Setter Property="Background" Value="Transparent"/>
                                 </Style>
                             </StackPanel.Resources>
-                            <TextBlock x:Name="DirectorName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
-                            <TextBlock x:Name="DirectorStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
+                            <TextBlock x:Name="BethName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
+                            <TextBlock x:Name="BethStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
 
                             <TextBlock Foreground="#959698" Text="Last known location:" FontWeight="SemiBold" FontSize="16"/>
-                            <TextBlock x:Name="DirectorLastLoc" Foreground="Azure" FontSize="15"/>
+                            <TextBlock x:Name="BethLastLoc" Foreground="Azure" FontSize="15"/>
 
                             <TextBlock Foreground="#959698" Text="First seen in:" FontWeight="SemiBold" FontSize="16"/>
-                            <TextBlock x:Name="DirectorFSeen" Foreground="Azure" FontSize="15"/>
+                            <TextBlock x:Name="BethFSeen" Foreground="Azure" FontSize="15"/>
                         </StackPanel>
                     </WrapPanel>
                 </Button.Content>
@@ -236,7 +202,7 @@
                         <Image Width="250" Height="250">
                             <Image.Source>
                                 <BitmapImage DecodePixelWidth="250" DecodePixelHeight="250" 
-                                             UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/10.jpeg}"/>
+                                             UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/5.jpeg}"/>
                             </Image.Source>
                         </Image>
                         <StackPanel>
@@ -246,14 +212,48 @@
                                     <Setter Property="Background" Value="Transparent"/>
                                 </Style>
                             </StackPanel.Resources>
-                            <TextBlock x:Name="AlanName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
-                            <TextBlock x:Name="AlanStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
+                            <TextBlock x:Name="JerryName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
+                            <TextBlock x:Name="JerryStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
 
                             <TextBlock Foreground="#959698" Text="Last known location:" FontWeight="SemiBold" FontSize="16"/>
-                            <TextBlock x:Name="AlanLastLoc" Foreground="Azure" FontSize="15"/>
+                            <TextBlock x:Name="JerryLastLoc" Foreground="Azure" FontSize="15"/>
 
                             <TextBlock Foreground="#959698" Text="First seen in:" FontWeight="SemiBold" FontSize="16"/>
-                            <TextBlock x:Name="AlanFSeen" Foreground="Azure" FontSize="15"/>
+                            <TextBlock x:Name="JerryFSeen" Foreground="Azure" FontSize="15"/>
+                        </StackPanel>
+                    </WrapPanel>
+                </Button.Content>
+            </Button>
+
+            <Button>
+                <Button.Content>
+                    <WrapPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="590"/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                        <Image Width="250" Height="250">
+                            <Image.Source>
+                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="250" 
+                                             UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/7.jpeg}"/>
+                            </Image.Source>
+                        </Image>
+                        <StackPanel>
+                            <StackPanel.Resources>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Margin" Value="15 5 0 0"/>
+                                    <Setter Property="Background" Value="Transparent"/>
+                                </Style>
+                            </StackPanel.Resources>
+                            <TextBlock x:Name="AbradolfName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
+                            <TextBlock x:Name="AbradolfStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
+
+                            <TextBlock Foreground="#959698" Text="Last known location:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="AbradolfLastLoc" Foreground="Azure" FontSize="15"/>
+
+                            <TextBlock Foreground="#959698" Text="First seen in:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="AbradolfFSeen" Foreground="Azure" FontSize="15"/>
                         </StackPanel>
                     </WrapPanel>
                 </Button.Content>
