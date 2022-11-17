@@ -89,7 +89,7 @@
                 </Button.Content>
             </Button>
 
-            <Button>
+            <Button Click="Morty_Click">
                 <Button.Content>
                     <WrapPanel>
                         <Grid>
@@ -123,7 +123,7 @@
                 </Button.Content>
             </Button>
 
-            <Button>
+            <Button Click="Summer_Click">
                 <Button.Content>
                     <WrapPanel>
                         <Grid>
@@ -157,7 +157,7 @@
                 </Button.Content>
             </Button>
 
-            <Button>
+            <Button Click="Beth_Click">
                 <Button.Content>
                     <WrapPanel>
                         <Grid>
@@ -191,7 +191,7 @@
                 </Button.Content>
             </Button>
 
-            <Button>
+            <Button Click="Jerry_Click">
                 <Button.Content>
                     <WrapPanel>
                         <Grid>
@@ -225,7 +225,7 @@
                 </Button.Content>
             </Button>
 
-            <Button>
+            <Button Click="Abradolf_Click">
                 <Button.Content>
                     <WrapPanel>
                         <Grid>
