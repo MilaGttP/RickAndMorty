@@ -35,7 +35,7 @@ namespace RickAndMorty
             JerryName.Text = JerrySmith.Name;
             JerryStatus.Text = $"{JerrySmith.Status} - {JerrySmith.Species}\n";
             JerryLastLoc.Text = $"{JsonWork.GetLocationForCharacter(ref characters, 5)}\n";
-            JerryFSeen.Text = JerrySmith.Episode[0].ToString();
+            JerryFSeen.Text = JsonWork.GetFirstEpisodeForCharacter(ref characters, 5);
 
 
         }

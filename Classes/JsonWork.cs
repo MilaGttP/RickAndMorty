@@ -102,17 +102,14 @@ namespace RickAndMorty
             GetEpisodesFromJson(ref episodes);
             List<string> tempEpsID = new List<string>();
             List<int> epsID = new List<int>();
-
             Character current = new Character();
             current = GetCharacter(ref characters, id);
             foreach (var item in current.Episode) tempEpsID.Add(item.Split('/').Last());
             epsID = tempEpsID.Select(item => int.Parse(item)).ToList();
-
             foreach (var item in episodes)
             {
                 foreach (var ids in epsID) if (item.ID == ids) episodeNames.Add(item.Name);
             }
-
             return episodeNames;
         }
 

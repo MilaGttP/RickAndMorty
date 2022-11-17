@@ -38,12 +38,12 @@
             </Grid>
         </StackPanel>
 
-        <WrapPanel Grid.Row="1">
+        <WrapPanel Grid.Row="1" Margin="0 60 0 0">
             <WrapPanel.Resources>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Margin" Value="32 38 0 0"/>
                     <Setter Property="Width" Value="590"/>
-                    <Setter Property="Height" Value="300"/>
+                    <Setter Property="Height" Value="250"/>
                     <Setter Property="Background" Value="#3d3e43"/>
                     <Setter Property="BorderThickness" Value="0"/>
                     <Style.Triggers>
@@ -62,9 +62,9 @@
                                 <ColumnDefinition Width="590"/>
                             </Grid.ColumnDefinitions>
                         </Grid>
-                        <Image Width="250" Height="280">
+                        <Image Width="250" Height="250">
                             <Image.Source>
-                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="280" 
+                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="250" 
                                              UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/5.jpeg}"/>
                             </Image.Source>
                         </Image>
@@ -97,13 +97,28 @@
                                 <ColumnDefinition Width="590"/>
                             </Grid.ColumnDefinitions>
                         </Grid>
-                        <Image Width="250" Height="280">
+                        <Image Width="250" Height="250">
                             <Image.Source>
-                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="280" 
+                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="250" 
                                              UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/6.jpeg}"/>
                             </Image.Source>
                         </Image>
-                        <TextBlock/>
+                        <StackPanel>
+                            <StackPanel.Resources>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Margin" Value="15 0 0 0"/>
+                                    <Setter Property="Background" Value="Transparent"/>
+                                </Style>
+                            </StackPanel.Resources>
+                            <TextBlock x:Name="AbadangoName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
+                            <TextBlock x:Name="AbadangoStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
+
+                            <TextBlock Foreground="#959698" Text="Last known location:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="AbadangoLastLoc" Foreground="Azure" FontSize="15"/>
+
+                            <TextBlock Foreground="#959698" Text="First seen in:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="AbadangoFSeen" Foreground="Azure" FontSize="15"/>
+                        </StackPanel>
                     </WrapPanel>
                 </Button.Content>
             </Button>
@@ -116,13 +131,28 @@
                                 <ColumnDefinition Width="590"/>
                             </Grid.ColumnDefinitions>
                         </Grid>
-                        <Image Width="250" Height="280">
+                        <Image Width="250" Height="250">
                             <Image.Source>
-                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="280" 
+                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="250" 
                                              UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/7.jpeg}"/>
                             </Image.Source>
                         </Image>
-                        <TextBlock/>
+                        <StackPanel>
+                            <StackPanel.Resources>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Margin" Value="15 0 0 0"/>
+                                    <Setter Property="Background" Value="Transparent"/>
+                                </Style>
+                            </StackPanel.Resources>
+                            <TextBlock x:Name="AbradolfName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
+                            <TextBlock x:Name="AbradolfStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
+
+                            <TextBlock Foreground="#959698" Text="Last known location:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="AbradolfLastLoc" Foreground="Azure" FontSize="15"/>
+
+                            <TextBlock Foreground="#959698" Text="First seen in:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="AbradolfFSeen" Foreground="Azure" FontSize="15"/>
+                        </StackPanel>
                     </WrapPanel>
                 </Button.Content>
             </Button>
@@ -135,13 +165,28 @@
                                 <ColumnDefinition Width="590"/>
                             </Grid.ColumnDefinitions>
                         </Grid>
-                        <Image Width="250" Height="280">
+                        <Image Width="250" Height="250">
                             <Image.Source>
-                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="280" 
+                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="250" 
                                              UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/8.jpeg}"/>
                             </Image.Source>
                         </Image>
-                        <TextBlock Text="{Binding }"/>
+                        <StackPanel>
+                            <StackPanel.Resources>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Margin" Value="15 0 0 0"/>
+                                    <Setter Property="Background" Value="Transparent"/>
+                                </Style>
+                            </StackPanel.Resources>
+                            <TextBlock x:Name="AdjudicatorName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
+                            <TextBlock x:Name="AdjudicatorStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
+
+                            <TextBlock Foreground="#959698" Text="Last known location:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="AdjudicatorLastLoc" Foreground="Azure" FontSize="15"/>
+
+                            <TextBlock Foreground="#959698" Text="First seen in:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="AdjudicatorFSeen" Foreground="Azure" FontSize="15"/>
+                        </StackPanel>
                     </WrapPanel>
                 </Button.Content>
             </Button>
@@ -154,13 +199,28 @@
                                 <ColumnDefinition Width="590"/>
                             </Grid.ColumnDefinitions>
                         </Grid>
-                        <Image Width="250" Height="280">
+                        <Image Width="250" Height="250">
                             <Image.Source>
-                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="280" 
+                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="250" 
                                              UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/9.jpeg}"/>
                             </Image.Source>
                         </Image>
-                        <TextBlock/>
+                        <StackPanel>
+                            <StackPanel.Resources>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Margin" Value="15 0 0 0"/>
+                                    <Setter Property="Background" Value="Transparent"/>
+                                </Style>
+                            </StackPanel.Resources>
+                            <TextBlock x:Name="DirectorName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
+                            <TextBlock x:Name="DirectorStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
+
+                            <TextBlock Foreground="#959698" Text="Last known location:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="DirectorLastLoc" Foreground="Azure" FontSize="15"/>
+
+                            <TextBlock Foreground="#959698" Text="First seen in:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="DirectorFSeen" Foreground="Azure" FontSize="15"/>
+                        </StackPanel>
                     </WrapPanel>
                 </Button.Content>
             </Button>
@@ -173,13 +233,28 @@
                                 <ColumnDefinition Width="590"/>
                             </Grid.ColumnDefinitions>
                         </Grid>
-                        <Image Width="250" Height="280">
+                        <Image Width="250" Height="250">
                             <Image.Source>
-                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="280" 
-                                             UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/15.jpeg}"/>
+                                <BitmapImage DecodePixelWidth="250" DecodePixelHeight="250" 
+                                             UriSource="{Binding Source=https://rickandmortyapi.com/api/character/avatar/10.jpeg}"/>
                             </Image.Source>
                         </Image>
-                        <TextBlock/>
+                        <StackPanel>
+                            <StackPanel.Resources>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Margin" Value="15 0 0 0"/>
+                                    <Setter Property="Background" Value="Transparent"/>
+                                </Style>
+                            </StackPanel.Resources>
+                            <TextBlock x:Name="AlanName" Foreground="Azure" FontWeight="Bold" FontSize="30"/>
+                            <TextBlock x:Name="AlanStatus" Foreground="Azure" FontWeight="SemiBold" FontSize="20"/>
+
+                            <TextBlock Foreground="#959698" Text="Last known location:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="AlanLastLoc" Foreground="Azure" FontSize="15"/>
+
+                            <TextBlock Foreground="#959698" Text="First seen in:" FontWeight="SemiBold" FontSize="16"/>
+                            <TextBlock x:Name="AlanFSeen" Foreground="Azure" FontSize="15"/>
+                        </StackPanel>
                     </WrapPanel>
                 </Button.Content>
             </Button>
