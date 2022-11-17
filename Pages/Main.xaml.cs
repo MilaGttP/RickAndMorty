@@ -37,7 +37,19 @@ namespace RickAndMorty
             JerryLastLoc.Text = $"{JsonWork.GetLocationForCharacter(ref characters, 5)}\n";
             JerryFSeen.Text = JsonWork.GetFirstEpisodeForCharacter(ref characters, 5);
 
+            Character Rick = new Character();
+            Rick = JsonWork.GetCharacter(ref characters, 1);
+            RickName.Text = Rick.Name;  
+            RickStatus.Text = $"{Rick.Status} - {Rick.Species}\n";
+            RickLastLoc.Text = $"{JsonWork.GetLocationForCharacter(ref characters, 1)}\n";
+            RickFSeen.Text = JsonWork.GetFirstEpisodeForCharacter(ref characters, 1);
 
+            Character Morty = new Character();
+            Morty = JsonWork.GetCharacter(ref characters, 2);
+            MortyName.Text = Morty.Name;
+            MortyStatus.Text = $"{Morty.Status} - {Morty.Species}\n";
+            MortyLastLoc.Text = $"{JsonWork.GetLocationForCharacter(ref characters, 2)}\n";
+            MortyFSeen.Text = JsonWork.GetFirstEpisodeForCharacter(ref characters, 2);
         }
     }
 }
