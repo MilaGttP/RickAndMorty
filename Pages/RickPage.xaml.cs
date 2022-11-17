@@ -33,6 +33,7 @@ namespace RickAndMorty
         private void RickPage_Loaded(object sender, RoutedEventArgs e)
         {
             Character Rick = JsonWork.GetCharacter(ref characters, 1);
+            Name.Text = Rick.Name;
         }
     }
 }
