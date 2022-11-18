@@ -6,12 +6,9 @@ namespace RickAndMorty
 {
     public partial class Summer : UserControl
     {
-        List<Character> characters;
         public Summer()
         {
-            InitializeComponent();
-            characters = new List<Character>();
-            JsonWork.GetCharactersFromJson(ref characters);
+            InitializeComponent();            
             Style style = new Style(this);
             Back.Click += style.Back_Click;
         }

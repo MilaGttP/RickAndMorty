@@ -6,12 +6,9 @@ namespace RickAndMorty
 {
     public partial class Morty : UserControl
     {
-        List<Character> characters;
         public Morty()
         {
             InitializeComponent();
-            characters = new List<Character>();
-            JsonWork.GetCharactersFromJson(ref characters);
             Style style = new Style(this);
             Back.Click += style.Back_Click;
         }
